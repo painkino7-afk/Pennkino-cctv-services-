@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aslam CCTV Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; color:#333; }
+        header { background:#222; color:#fff; padding:20px 0; text-align:center; }
+        nav { display:flex; justify-content:center; gap:20px; background:#444; flex-wrap:wrap; }
+        nav a { color:#fff; text-decoration:none; padding:10px 15px; }
+        nav a:hover { background:#666; border-radius:5px; }
+        section { padding:50px 20px; text-align:center; }
+        .services { display:flex; justify-content:center; gap:30px; flex-wrap:wrap; }
+        .service-card { background:#fff; padding:20px; width:250px; box-shadow:0 0 10px rgba(0,0,0,0.1); border-radius:10px; }
+        .service-card img { width:100%; border-radius:10px; margin-bottom:15px; }
+        .contact-form { max-width:500px; margin:auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
+        .contact-form input, .contact-form textarea { width:100%; padding:10px; margin:10px 0; border-radius:5px; border:1px solid #ccc; }
+        .contact-form button { padding:10px 20px; border:none; background:#222; color:#fff; border-radius:5px; cursor:pointer; }
+        .contact-form button:hover { background:#555; }
+        .testimonials { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
+        .testimonial-card { background:#fff; padding:20px; width:250px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); font-style:italic; }
+        .social-links a { color:#222; margin:0 10px; font-size:20px; text-decoration:none; }
+        .social-links a:hover { color:#007BFF; }
+        iframe { width:100%; height:300px; border:0; border-radius:10px; }
+        .admin-section { background:#eee; padding:20px; border-radius:10px; margin-top:30px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Aslam CCTV Services</h1>
+    <p>Professional CCTV Installation & Support Across India</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#tenders">Private Tenders</a>
+    <a href="#contact">Contact</a>
+    <a href="#admin">Admin Login</a>
+</nav>
+
+<section id="home">
+    <h2>Welcome to Aslam CCTV Services</h2>
+    <p>High-quality CCTV systems and professional installation for homes, malls, and offices.</p>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-card">
+            <img src="images/technician1.jpg" alt="CCTV Sale">
+            <h3>CCTV Sale</h3>
+            <p>Top quality cameras and equipment.</p>
+        </div>
+        <div class="service-card">
+            <img src="images/technician2.jpg" alt="Installation">
+            <h3>Installation</h3>
+            <p>Precise and secure camera installation.</p>
+        </div>
+        <div class="service-card">
+            <img src="images/technician3.jpg" alt="Maintenance">
+            <h3>Maintenance</h3>
+            <p>Full support for system issues.</p>
+        </div>
+    </div>
+</section>
+
+<section id="tenders">
+    <h2>Private / Corporate Tenders</h2>
+    <form class="contact-form" action="php/send_tender.php" method="POST">
+        <input type="text" name="company" placeholder="Company Name" required>
+        <input type="text" name="contact_person" placeholder="Contact Person" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="location" placeholder="City / State" required>
+        <textarea name="details" placeholder="Project Details / Requirements" rows="5" required></textarea>
+        <button type="submit">Submit Request</button>
+    </form>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Phone: +91 8574854369 | Email: penkino7@gmail.com</p>
+    <p>Location: Gorakhpur, India</p>
+</section>
+
+<section id="admin">
+    <h2>Admin / Technician Panel</h2>
+    <div class="admin-section">
+        <p>Login and manage technicians, assign local jobs:</p>
+        <form action="php/admin_login.php" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Once logged in, you can add technicians and assign jobs based on city/location.</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Aslam CCTV Services | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
